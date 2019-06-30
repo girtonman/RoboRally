@@ -5,6 +5,7 @@ import GameScene from '../scenes/GameScene';
 import BootScene from '../scenes/BootScene';
 import PreloaderScene from '../scenes/PreloaderScene';
 import TitleScene from '../scenes/TitleScene';
+import CreditsScene from '../scenes/CreditsScene';
 
 export class Game extends Component {
   componentDidMount() {
@@ -12,6 +13,7 @@ export class Game extends Component {
     game.scene.add('Boot', BootScene);
     game.scene.add('Preloader', PreloaderScene);
     game.scene.add('Title', TitleScene);
+    game.scene.add('Credits', CreditsScene);
     game.scene.add('Game', GameScene);
     game.scene.start('Boot');
   };
