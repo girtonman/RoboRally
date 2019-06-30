@@ -1,5 +1,10 @@
 ﻿import Phaser from 'phaser';
 import logoImg from "../assets/logo.png";
+import townTheme from '../assets/TownTheme.mp3';
+import ui_blueBoxCheckmark from '../assets/ui/blueBoxCheckmark.png';
+import ui_blueButton02 from '../assets/ui/blueButton02.png';
+import ui_blueButton03 from '../assets/ui/blueButton03.png';
+import ui_greyBox from '../assets/ui/greyBox.png';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -80,9 +85,12 @@ export default class PreloaderScene extends Phaser.Scene {
       _this.time.delayedCall(3000, _this.ready, [], _this);
     });
 
-    // load assets needed in our game
-    //this.load.image('blueButton1', 'assets/ui/blue_button02.png');
-    //this.load.image('blueButton2', 'assets/ui/blue_button03.png');
+    // load assets
     this.load.image('logo', logoImg);
+    this.load.image('ui_blueBoxCheckmark', ui_blueBoxCheckmark);
+    this.load.image('ui_blueButton02', ui_blueButton02);
+    this.load.image('ui_blueButton03', ui_blueButton03);
+    this.load.image('ui_greyBox', ui_greyBox);
+    this.load.audio('townTheme', townTheme);
   };
 };
