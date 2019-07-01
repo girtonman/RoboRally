@@ -5,6 +5,11 @@ import ui_blueBoxCheckmark from '../assets/ui/blueBoxCheckmark.png';
 import ui_blueButton02 from '../assets/ui/blueButton02.png';
 import ui_blueButton03 from '../assets/ui/blueButton03.png';
 import ui_greyBox from '../assets/ui/greyBox.png';
+import tilesetA from '../assets/tilesets/2005TilesetA.png';
+import tilesetB from '../assets/tilesets/2005TilesetB.png';
+import pushers from '../assets/tilesets/2005TilesetPushers.png';
+import pits from '../assets/tilesets/2005TilesetPits.png';
+import board_chess from '../assets/boards/Chess.json';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -82,7 +87,7 @@ export default class PreloaderScene extends Phaser.Scene {
     });
 
     this.load.on('complete', function () {
-      _this.time.delayedCall(3000, _this.ready, [], _this);
+      _this.time.delayedCall(1000, _this.ready, [], _this);
     });
 
     // load assets
@@ -92,5 +97,10 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('ui_blueButton03', ui_blueButton03);
     this.load.image('ui_greyBox', ui_greyBox);
     this.load.audio('townTheme', townTheme);
+    this.load.image('TilesetA', tilesetA);
+    this.load.image('TilesetB', tilesetB);
+    this.load.image('Pushers', pushers);
+    this.load.image('Pits', pits);
+    this.load.tilemapTiledJSON('chess', board_chess);
   };
 };
